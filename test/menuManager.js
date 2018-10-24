@@ -1,20 +1,35 @@
-/* global menuManager, describe, it, expect, should */
+/* global MenuManager, describe, it, expect, should */
 
-describe('menuManager()', function () {
+var mManager = new MenuManager(); //Create a menu manager
+
+describe('MenuManager', function () {
   'use strict';
 
-  it('exists', function () {
-    expect(menuManager).to.be.a('function');
-
+  it('exists', function () { //Checking that menu manager exists and all of its functions are defined
+    expect(MenuManager).to.be.a('function');
+    expect(mManager.addScene).to.be.a('function');
+    expect(mManager.removeScene).to.be.a('function');
+    expect(mManager.setAutoTransition).to.be.a('function');
   });
 
-  it('does something', function () {
+  //Do test
+  it('Add 5 Scenes', function () {
+    mManager.addScene("Scene1", 29);
+    mManager.addScene("Scene2", 28);
+    mManager.addScene("Scene3", 27);
+    mManager.addScene("Scene4", 26);
+    mManager.addScene("Scene5", 25);
     expect(true).to.equal(false);
   });
 
-  it('does something else', function () {
+  it('Delete 5 Scenes', function () {
+    mManager.addScene("Scene1");
+    mManager.addScene("Scene2");
+    mManager.addScene("Scene3");
+    mManager.addScene("Scene4");
+    mManager.addScene("Scene5");
     expect(true).to.equal(false);
   });
 
-  // Add more assertions here
+
 });
